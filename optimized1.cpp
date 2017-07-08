@@ -74,6 +74,7 @@ int main()
 		//de-allocate the memoery used
 		deAllocateMemory(matA, i);
 		deAllocateMemory(matB, i);
+		deAllocateMemory(matBT, i);
 		deAllocateMemory(matC, i);
 
 	}
