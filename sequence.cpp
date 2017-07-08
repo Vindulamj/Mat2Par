@@ -22,8 +22,8 @@ int main()
 	// Denotes the number of times, the calculations should be sampled
 	int iterations = 10;
 	//parameters for matrix sizes
-	int min_mat_size = 1600;
-	int max_mat_size = 1600;
+	int min_mat_size = 200;
+	int max_mat_size = 2000;
 	int increment = 200;
 
 	//matrix A, B, C
@@ -158,6 +158,3 @@ void printResults(double *time_taken_array, int iterations, int mat_size)
 
 	printf("%d\t\t%4.6f\t\t%4.6f\t\t%4.2f\n", mat_size, mean_time, standard_deviation, required_samples);
 }
-
-
-
