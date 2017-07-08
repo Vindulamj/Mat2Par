@@ -179,9 +179,10 @@ void transpose(double **matX, double **matXT, int length_size) {
 //get the sum of multiplicated values of given two rows
 double getMatrixValue(double *vecX, double *vecY, int length_size) {
 	double sum = 0.0;
-	int block_size = 4;
-	for (int i = 0; i < length_size; i+=block_size) {
-		sum += vecX[i] * vecY[i] + vecX[i+1] * vecY[i+1] + vecX[i+2] * vecY[i+2] + vecX[i+3] * vecY[i+3];
+	int block_size = 8;
+	for (int i = 0; i < length_size; i += block_size) {
+		sum += vecX[i] * vecY[i] + vecX[i + 1] * vecY[i + 1] + vecX[i + 2] * vecY[i + 2] + vecX[i + 3] * vecY[i + 3] + 
+		vecX[i + 4] * vecY[i + 4] + vecX[i + 5] * vecY[i + 5] + vecX[i + 6] * vecY[i + 6] + vecX[i + 7] * vecY[i + 7];
 	}
 	return sum;
 }
