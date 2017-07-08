@@ -22,8 +22,8 @@ int main()
 	// Denotes the number of times, the calculations should be sampled
 	int iterations = 10;
 	//parameters for matrix sizes
-	int min_mat_size = 1600;
-	int max_mat_size = 1600;
+	int min_mat_size = 200;
+	int max_mat_size = 2000;
 	int increment = 200;
 
 	//matrix A, B, C
@@ -119,8 +119,6 @@ void matrixMultiplication(double **matA, double **matB, double **matC, int lengt
 	//Define the parallel-for block
 	#pragma omp parallel for
 	for (int i = 0; i < length_size; i++) {
-		//Define the parallel-for block
-		#pragma omp parallel for
 		for (int j = 0; j < length_size; j++) {
 			double sum_of_multiplications = 0;
 			for (int k = 0; k < length_size; k++) {
